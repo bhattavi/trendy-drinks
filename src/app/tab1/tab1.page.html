@@ -1,0 +1,50 @@
+<ion-header [translucent]="false">
+    <ion-toolbar color="primary">
+        <ion-title class="font-animation" color="success">
+            Trendy
+            <fa-icon icon="cocktail"></fa-icon>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content id="background" [fullscreen]="true">
+
+
+    <ion-slides *ngIf="trending.length > 0" [options]="slideOptions" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
+
+        <ion-slide *ngFor="let drink of trending" color="transparent">
+            <div *ngIf="drink" (click)="onClick(this.drink.drinks[0].idDrink)" class="slide">
+                <img *ngIf="this.drink.drinks[0].strDrinkThumb" [src]="this.drink.drinks[0].strDrinkThumb">
+                <ion-card-header>
+                    <ion-card-title color="primary">{{this.drink.drinks[0].strDrink}}</ion-card-title>
+
+                    <ion-text color="secondary">
+                        <h2>{{this.drink.drinks[0].strIngredient1}}</h2>
+                    </ion-text>
+
+                    <ion-text color="secondary">
+                        <h2>{{this.drink.drinks[0].strIngredient2}}</h2>
+                    </ion-text>
+
+                    <ion-text color="secondary">
+                        <h2>{{this.drink.drinks[0].strIngredient3}}</h2>
+                    </ion-text>
+                </ion-card-header>
+
+            </div>
+        </ion-slide>
+
+
+
+    </ion-slides>
+
+    <!-- <ng-template #loading>
+        <ion-card color="light" class="center-box">
+            <ion-card-content>
+                <ion-img class="center" src="assets/Spinner-1.5s-200px.gif" alt="loading"></ion-img>
+            </ion-card-content>
+        </ion-card>
+    </ng-template> -->
+
+
+</ion-content>

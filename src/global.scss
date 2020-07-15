@@ -1,0 +1,108 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+
+/* Core CSS required for Ionic components to work properly */
+
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+#background {
+    --ion-background-color: linear-gradient(90deg, rgba(0, 30, 65, 1) 0%, rgba(91, 203, 245, 1) 100%);
+}
+
+.font-animation {
+    animation: fontAni 4s infinite;
+}
+
+@keyframes fontAni {
+    0% {
+        font-size: 20px;
+    }
+    30% {
+        font-size: 30px;
+    }
+    100% {
+        font-size: 20px;
+    }
+}
+
+.animation {
+    -moz-animation: icons 5s infinite;
+    /* Fx 5+ */
+    -webkit-animation: icons 5s infinite;
+    /* Safari 4+ */
+    -o-animation: icons 5s infinite;
+    /* Opera 12+ */
+    animation: icons 5s infinite;
+    /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes icons {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes icons {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes icons {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes icons {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}

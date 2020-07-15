@@ -1,0 +1,40 @@
+<ion-header [translucent]="false">
+    <ion-toolbar color="primary">
+        <ion-title class="font-animation" color="success">
+            Search
+            <fa-icon icon="cocktail"></fa-icon>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content id="background" [fullscreen]="true">
+
+
+    <ion-searchbar color="primary" animated type="search" placeholder="Search" [(ngModel)]="search" (keyup)="getData()"></ion-searchbar>
+
+
+    <ion-list color="transparent" id="container" *ngIf="searchData">
+        <ion-item (click)="onClick(drink.idDrink)" color="transparent" *ngFor="let drink of searchData.drinks">
+
+            <ion-thumbnail slot="start">
+                <img src="{{drink.strDrinkThumb}}" alt="">
+            </ion-thumbnail>
+            <ion-label color="secondary">
+                <h2>{{drink.strDrink}}</h2>
+
+            </ion-label>
+            <ion-label color="primary">
+                <p>{{drink.strIngredient1}}</p>
+                <p>{{drink.strIngredient2}}</p>
+                <p>{{drink.strIngredient3}}</p>
+            </ion-label>
+
+
+        </ion-item>
+        <ion-item color="transparent" id="noData">
+            <ion-label color="secondary">No search results.</ion-label>
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>

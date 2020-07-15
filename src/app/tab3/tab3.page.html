@@ -1,0 +1,38 @@
+<ion-header [translucent]="false">
+    <ion-toolbar color="primary">
+        <ion-title class="font-animation" color="success">
+            About
+            <fa-icon icon="cocktail"></fa-icon>
+        </ion-title>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content id="background" [fullscreen]="true">
+
+
+    <ion-card>
+
+        <ion-card-header>
+            <ion-card-subtitle color="secondary">Created By: Abhinav Bhatt</ion-card-subtitle>
+            <br>
+            <ion-card-title color="primary">Trendy Drinks</ion-card-title>
+        </ion-card-header>
+        <ion-card-content><img [src]="this.imgString" alt="">
+            <ion-text color="secondary">
+                <h1> <em> “It’s a great advantage not to drink among hard drinking people.”</em></h1>
+                <br>
+                <h4><strong>― F. Scott Fitzgerald, The Great Gatsby</strong></h4>
+            </ion-text>
+            <ion-button class="font-animation" expand="full" color="success" (click)="clickPicture()">
+                Click Your Creation
+            </ion-button>
+
+
+
+        </ion-card-content>
+    </ion-card>
+
+
+
+</ion-content>
